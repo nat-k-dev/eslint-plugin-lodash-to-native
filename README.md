@@ -2,53 +2,40 @@
 
 Плагин для ESLint. Для проверки и отладки плагина использовался сайт [https://astexplorer.net/](https://astexplorer.net/) (кнопка Transform -> ESLint v4).
 
-Не получилось: 
-* использовать Array.isArray и тернарный оператор в качестве возвращаемого значения из правила линтера. Почему-то из sourceCode вместо функции извлекался код всей программы и вставлялся на место функции.
+## Установка
 
-## Installation
+Создать новый проект в VS Code, создать в нем файл с кодом, где используется _.map(collection, callback);
 
-You'll first need to install [ESLint](http://eslint.org):
+Инициализировать npm. Установить  [ESLint](http://eslint.org) и lodash:
 
 ```
+$ npm init
 $ npm i eslint --save-dev
+$ npm i lodash --save-dev
 ```
 
-Next, install `eslint-plugin-lodash-to-native`:
+Установить плагин `eslint-plugin-lodash-to-native`:
 
 ```
-$ npm install eslint-plugin-lodash-to-native --save-dev
+$ npm install -S https://github.com/appalse/eslint-plugin-lodash-to-native.git
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-lodash-to-native` globally.
 
-## Usage
+## Использование
 
-Add `lodash-to-native` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
-
-```json
-{
-    "plugins": [
-        "lodash-to-native"
-    ]
-}
+В файле .eslintrc.js добавить:
+```
+  "plugins": [
+      "lodash-to-native"
+  ],
+  "rules": {
+      "lodash-to-native/map": "warn"
+  },
 ```
 
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "lodash-to-native/rule-name": 2
-    }
-}
+Далее можно писать код и он будет подсвечиваться через ESLint. Например, можно ввести:
 ```
-
-## Supported Rules
-
-* Fill in provided rules here
-
-
-
-
-
+_.map([1, 2, 3], console.log);
+```
+Если нажать Quick Fix, то будет произведена замена.
