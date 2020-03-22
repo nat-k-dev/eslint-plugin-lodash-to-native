@@ -23,6 +23,12 @@ ruleTester.run('lodash-to-native', rule, {
     valid: [
         {
             code: '[1, 2, 3].map(cb)'
+        },
+        {
+            code: '_.map({a: 1, b: 2}, cb)'
+        },
+        {
+            code: 'lodash.map([1, 2, 3], cb)'
         }
     ],
 
