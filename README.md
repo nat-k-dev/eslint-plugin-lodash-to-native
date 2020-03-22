@@ -1,6 +1,6 @@
 # eslint-plugin-lodash-to-native
 
-Плагин для ESLint. Для проверки и отладки плагина использовался сайт https://astexplorer.net/(кнопка Transform -> ESLint v4).
+Плагин для ESLint. Для проверки и отладки плагина использовался сайт [https://astexplorer.net/](https://astexplorer.net/) (кнопка Transform -> ESLint v4).
 
 ## Installation
 
