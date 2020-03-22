@@ -2,6 +2,9 @@
 
 Плагин для ESLint. Для проверки и отладки плагина использовался сайт [https://astexplorer.net/](https://astexplorer.net/) (кнопка Transform -> ESLint v4).
 
+Не получилось: 
+* использовать Array.isArray и тернарный оператор в качестве возвращаемого значения из правила линтера. Почему-то из sourceCode вместо функции извлекался код всей программы и вставлялся на место функции.
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
