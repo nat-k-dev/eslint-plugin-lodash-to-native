@@ -2,7 +2,7 @@
 
 Плагин для ESLint. Для проверки и отладки плагина использовался сайт [https://astexplorer.net/](https://astexplorer.net/) (кнопка Transform -> ESLint v4).
 
-## Установка
+## Установка плагина для использования в каком-либо проекте
 
 Создать новый проект в VS Code, создать в нем файл с кодом, где используется _.map(collection, callback);
 
@@ -39,3 +39,10 @@ $ npm install -S https://github.com/appalse/eslint-plugin-lodash-to-native.git
 _.map([1, 2, 3], console.log);
 ```
 Если нажать Quick Fix, то будет произведена замена.
+
+
+## Установка и тестирование текущего репозитория
+```
+npm install
+npm test
+```
