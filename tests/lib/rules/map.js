@@ -18,19 +18,20 @@ var rule = require("../../../lib/rules/map"),
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("map", rule, {
+ruleTester.run('lodash-to-native', rule, {
 
     valid: [
-
-        // give me some code that won't trigger a warning
+        {
+            code: '[1, 2, 3].map(cb)'
+        }
     ],
 
     invalid: [
         {
-            code: "_.map(collection, cb)",
+            code: '_.map(collection, cb)',
             errors: [{
-                message: "Fill me in.",
-                type: "Me too"
+                message: 'Replace lodash map by Array.map',
+                type: 'CallExpression'
             }]
         }
     ]
